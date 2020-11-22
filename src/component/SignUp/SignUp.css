@@ -1,0 +1,26 @@
+.form-header-txt{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.form-header-txt h2{
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.form-header-txt p{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.form-control-lg{
+    border-color: #495057;
+}
+
+.btn-success{
+    background-color:#7ECB20!important;
+}
+
+/* input:focus{
+    outline: none;
+} */

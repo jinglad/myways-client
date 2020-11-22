@@ -1,0 +1,35 @@
+.nav-link{
+    font-family: 'Open Sans', sans-serif;
+    color: black!important;
+    margin-right: 30px;
+}
+
+.sign-up-btn button{
+    font-weight: 600;
+    color: #7ECB20;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+}
+
+.login-btn button{
+    font-weight: 600;
+    color: #fff;
+    background: #7ECB20;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 7px 38px;
+}
+
+.box-shadow-bottom{
+    box-shadow: 0px 3px 6px #0000000F;
+}
+.box-shadow-bottom-item{
+    box-shadow: 0px 1px 1px #0000000F;
+}
+
+.dropdown-menu a{
+    display: block;
+}
