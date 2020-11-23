@@ -20,7 +20,7 @@ const SignUp = ({ modalIsOpen, closeModal }) => {
   const { register, handleSubmit} = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/signUp", {
+    fetch("https://dashing-nosy-hail.glitch.me/signUp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

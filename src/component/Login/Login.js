@@ -16,20 +16,14 @@ const Login = ({ modalIsOpen, closeModal }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/login", {
+    fetch("https://dashing-nosy-hail.glitch.me/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result === true) {
-          closeModal();
-          alert("Your Login is Successfull...!");
-        }
-      });
+      closeModal();
   };
 
   return (
