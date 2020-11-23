@@ -3,15 +3,25 @@ import "./Navbar.css";
 import logo from "../../img/logo.png";
 import SignUp from "../SignUp/SignUp";
 import icon from '../../img/Instant_logo.png';
+import Login from "../Login/Login";
 
 const Navbar = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  function openModal() {
+  const [loginModal, setLoginModal] = useState(false);
+  function signUpOpenModal() {
     setIsOpen(true);
   }
 
-  function closeModal() {
+  function signUpCloseModal() {
     setIsOpen(false);
+  }
+
+  function loginOpenModal() {
+    setLoginModal(true);
+  }
+
+  function loginCloseModal() {
+    setLoginModal(false);
   }
 
   return (
@@ -59,11 +69,12 @@ const Navbar = () => {
               </a>
             </li>
             <li className="sign-up-btn">
-              <button onClick={openModal}>SIGN UP</button>
-              <SignUp modalIsOpen={modalIsOpen} closeModal={closeModal} />
+              <button onClick={signUpOpenModal}>SIGN UP</button>
+              <SignUp modalIsOpen={modalIsOpen} closeModal={signUpCloseModal} />
             </li>
             <li className="login-btn">
-              <button>LOGIN</button>
+              <button onClick={loginOpenModal}>LOGIN</button>
+              <Login modalIsOpen={loginModal} closeModal={loginCloseModal}/>
             </li>
           </ul>
         </div>

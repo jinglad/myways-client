@@ -17,25 +17,25 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const SignUp = ({ modalIsOpen, closeModal }) => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit} = useForm();
 
   const onSubmit = (data) => {
-    //   console.log(data);
-    fetch('http://localhost:5000/signUp', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+    fetch("http://localhost:5000/signUp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-            if (result) {
-                alert('Your Registration is Successfull...!');
-            }
-        })
-  }
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        if (result) {
+          closeModal();
+          alert("Your Registration is Successfull...!");
+        }
+      });
+  };
 
   return (
     <div>
@@ -88,7 +88,6 @@ const SignUp = ({ modalIsOpen, closeModal }) => {
               placeholder="Password"
             />
           </div>
-          {errors.exampleRequired && <span>This field is required</span>}
           <input type="submit" className="btn btn-block btn-success" />
         </form>
       </Modal>
