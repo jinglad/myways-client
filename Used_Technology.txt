@@ -1,0 +1,4 @@
+Used Technology:
+
+	Front-end : React.js, Bootstrap, React-Router, React-Modal
+	Back-end : Node.js, Express.js, MongoDB,
